@@ -1,9 +1,5 @@
 @use "../util" as u;
 
-%widget {
-    padding: u.rem(16);
-}
-
 .grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -44,13 +40,6 @@
     }
 
     &__widget {
-        &--magenta {
-            @extend %widget;
-            background-color: hsl(300, 100%, 30%);
-        }
-        &--green {
-            @extend %widget;
-            background-color: hsl(120, 100%, 27%);
-        }
+        padding: u.rem(16);
     }
 }
