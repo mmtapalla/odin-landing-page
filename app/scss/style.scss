@@ -1,3 +1,151 @@
-@forward "globals";
-@forward "util";
-@forward "layout";
+@use "sass:math";
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+@function rem($pixel) {
+    @return math.div($pixel, 16) + rem;
+}
+
+:root {
+    --blue: #3882f6;
+    --black: #1f2937;
+    --white: #f9faf8;
+    --gray: #e5e7eb;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    line-height: 110%;
+    list-style: none;
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.blue {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.white {
+    background-color: var(--white);
+    color: var(--black);
+}
+
+.width {
+    width: 75vw;
+    margin-inline: auto;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: rem(25) 0;
+
+    &__logo {
+        font-size: rem(24);
+    }
+
+    &__nav {
+        font-size: rem(18px);
+        color: var(--gray);
+
+        & ul {
+            display: flex;
+            gap: rem(25);
+
+            & li a {
+                color: var(--white);
+            }
+        }
+    }
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: rem(100) 0;
+    gap: rem(24);
+
+    &__text {
+        &__heading {
+            font-size: rem(48);
+            font-weight: extra-bold;
+        }
+        &__paragraph {
+            font-size: rem(18);
+            color: var(--gray);
+        }
+        & button {
+            background-color: var(--blue);
+            border: none;
+            border-radius: rem(5);
+            font-weight: bold;
+            color: var(--white);
+            padding: rem(10) rem(30);
+            cursor: pointer;
+            margin: rem(10) 0;
+        }
+    }
+    &__image {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #6d747d;
+    }
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &__header {
+        font-size: rem(36);
+        padding: rem(50);
+    }
+
+    &__cards {
+        display: inherit;
+        justify-content: space-between;
+        gap: rem(32);
+
+        & div {
+            display: inherit;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            & img {
+                border: rem(2) solid var(--blue);
+                border-radius: rem(10);
+                height: rem(150);
+                width: rem(150);
+            }
+
+            & p {
+                text-align: center;
+                font-size: rem(18);
+                color: var(--black);
+            }
+        }
+    }
+}

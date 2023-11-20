@@ -3,55 +3,66 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
-            rel="stylesheet"
-        />
         <link rel="stylesheet" href="/dist/style.css" />
-        <script src="/app/js/script.js"></script>
-        <title>Document</title>
+        <title>Landing Page | The Odin Project</title>
     </head>
-
-    <body>
-        <div class="grid">
-            <main class="grid__main magenta">
-                <h1>Gamer's rise up!</h1>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
-                    neque molestias libero aspernatur assumenda natus
-                    laudantium, laboriosam velit dicta soluta accusantium, iusto
-                    dignissimos veniam odio, aperiam at veritatis vel fugiat?
-                </p>
+    <body class="flex-container">
+        <section class="blue">
+            <header class="header width">
+                <h1 class="header__logo">Header Logo</h1>
+                <nav class="header__nav">
+                    <ul>
+                        <li><a href="#">header link one</a></li>
+                        <li><a href="#">header link two</a></li>
+                        <li><a href="#">header link three</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <main class="hero width">
+                <div class="hero__text">
+                    <h1 class="hero__text__heading">This website is awesome</h1>
+                    <p class="hero__text__paragraph">
+                        This website has some subtext that goes here under the
+                        main title. It's a smaller font and the color is lower
+                        contrast
+                    </p>
+                    <button>Sign up</button>
+                </div>
+                <div class="hero__image">
+                    this is a placeholder for an image
+                </div>
             </main>
-            <aside class="grid__sidebar">
-                <div class="grid__widget green">
-                    <h2>I'm the first widget</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Minima qui vero mollitia. Debitis quos tenetur veniam
-                        labore beatae, quo fugiat tempora, facere soluta
-                        recusandae blanditiis facilis, tempore placeat dolorum
-                        reprehenderit.
-                    </p>
+        </section>
+        <section class="white">
+            <div class="info width">
+                <h1 class="info__header">Some random information.</h1>
+                <div class="info__cards">
+                    <div>
+                        <img src="#" />
+                        <p>
+                            this is some subtext under an illustration or image
+                        </p>
+                    </div>
+                    <div>
+                        <img src="#" />
+                        <p>
+                            this is some subtext under an illustration or image
+                        </p>
+                    </div>
+                    <div>
+                        <img src="#" />
+                        <p>
+                            this is some subtext under an illustration or image
+                        </p>
+                    </div>
+                    <div>
+                        <img src="#" />
+                        <p>
+                            this is some subtext under an illustration or image
+                        </p>
+                    </div>
                 </div>
-                <div class="grid__widget magenta">
-                    <h2>I'm the second widget</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Minima qui vero mollitia.
-                    </p>
-                </div>
-                <div class="grid__widget magenta">
-                    <h2>I'm the third widget</h2>
-                    <p>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing
-                        elit. Minima alias quae sunt corrupti vitae consequatur
-                        nihil, placeat tenetur!
-                    </p>
-                </div>
-            </aside>
-        </div>
+            </div>
+        </section>
     </body>
 </html>
