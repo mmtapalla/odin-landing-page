@@ -1,10 +1,9 @@
 @use "sass:math";
-
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
-
 @function rem($pixel) {
     @return math.div($pixel, 16) + rem;
 }
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 :root {
     --blue: #3882f6;
@@ -30,122 +29,187 @@ html {
     font-family: "Roboto", sans-serif;
 }
 
-.flex-container {
-    display: flex;
-    flex-direction: column;
-}
-
-.blue {
+.dark-section {
     background-color: var(--black);
     color: var(--white);
 }
 
-.white {
+.light-section {
     background-color: var(--white);
     color: var(--black);
 }
 
+.gray-section {
+    background-color: var(--gray);
+    color: var(--black);
+}
+
 .width {
-    width: 75vw;
-    margin-inline: auto;
+    margin-inline: 16.66vw;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
 }
 
 .header {
-    display: flex;
+    @extend .width, .flex-row;
     align-items: center;
     justify-content: space-between;
-    padding: rem(25) 0;
+    padding-top: rem(20);
+    padding-bottom: rem(20);
 
     &__logo {
         font-size: rem(24);
+        font-weight: 900;
     }
 
-    &__nav {
-        font-size: rem(18px);
-        color: var(--gray);
-
-        & ul {
-            display: flex;
-            gap: rem(25);
-
-            & li a {
-                color: var(--white);
-            }
+    &__links {
+        display: inherit;
+        gap: rem(30);
+        & a {
+            font-size: rem(18);
+            color: var(--white);
         }
     }
 }
 
 .hero {
-    display: flex;
+    @extend .width, .flex-row;
     align-items: center;
-    justify-content: space-between;
     padding: rem(100) 0;
-    gap: rem(24);
+    gap: rem(50);
 
-    &__text {
-        &__heading {
-            font-size: rem(48);
-            font-weight: extra-bold;
-        }
-        &__paragraph {
-            font-size: rem(18);
-            color: var(--gray);
-        }
-        & button {
-            background-color: var(--blue);
-            border: none;
-            border-radius: rem(5);
-            font-weight: bold;
-            color: var(--white);
-            padding: rem(10) rem(30);
-            cursor: pointer;
-            margin: rem(10) 0;
-        }
+    &__heading {
+        font-size: rem(48);
+        font-weight: 900;
     }
+
+    &__subheading {
+        font-size: rem(18);
+        margin-bottom: 16px;
+    }
+
+    &__button {
+        border: none;
+        background-color: var(--blue);
+        color: white;
+        font-weight: 900;
+        border-radius: rem(10);
+        padding: rem(10) rem(36);
+    }
+
     &__image {
         display: flex;
-        flex: 1;
-        flex-direction: column;
         align-items: center;
         justify-content: center;
+        width: rem(525);
+        height: rem(240);
         background-color: #6d747d;
+        font-size: rem(18);
     }
 }
 
 .info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @extend .width, .flex-col;
     justify-content: center;
+    padding: rem(100) 0;
+    gap: rem(50);
 
-    &__header {
-        font-size: rem(36);
-        padding: rem(50);
+    &__heading {
+        font-size: 36px;
+        font-weight: 900;
+        text-align: center;
     }
-
     &__cards {
-        display: inherit;
-        justify-content: space-between;
-        gap: rem(32);
+        @extend .flex-row;
+        align-items: center;
+        justify-content: center;
+        gap: rem(50);
 
-        & div {
-            display: inherit;
-            flex-direction: column;
-            align-items: center;
+        & > div {
+            @extend .flex-col;
+            width: rem(170);
+        }
+
+        &__image {
+            display: flex;
             justify-content: center;
+            border: rem(4) solid var(--blue);
+            border-radius: rem(15);
+            aspect-ratio: 1 / 1;
+            width: 100%;
+            margin-bottom: rem(10);
+        }
 
-            & img {
-                border: rem(2) solid var(--blue);
-                border-radius: rem(10);
-                height: rem(150);
-                width: rem(150);
-            }
-
-            & p {
-                text-align: center;
-                font-size: rem(18);
-                color: var(--black);
-            }
+        &__subtext {
+            font-size: rem(18);
+            text-align: center;
         }
     }
+}
+
+.quote {
+    @extend .width, .flex-col;
+    justify-content: center;
+    padding: rem(100) 0;
+    gap: rem(50);
+
+    & blockquote {
+        font-size: rem(36);
+        font-style: italic;
+        font-weight: 300;
+    }
+
+    & p {
+        font-size: 24px;
+        font-weight: bold;
+        text-align: right;
+    }
+}
+
+.call-to-action {
+    @extend .width, .flex-row;
+    justify-content: center;
+    margin-block: rem(100);
+    padding: rem(50) rem(120);
+    color: var(--white);
+    gap: rem(50);
+    background-color: var(--blue);
+    border-radius: rem(10);
+
+    &__text {
+        @extend .flex-col;
+
+        & h1 {
+            font-size: rem(24);
+        }
+
+        & p {
+            font-size: rem(18);
+        }
+    }
+
+    & button {
+        border: none;
+        background-color: var(--blue);
+        color: white;
+        font-weight: 900;
+        border: 2px solid var(--white);
+        border-radius: rem(10);
+        padding: rem(10) rem(36);
+    }
+}
+
+.footer {
+    @extend .width, .flex-row;
+    align-items: center;
+    justify-content: center;
+    padding: rem(40) 0;
 }

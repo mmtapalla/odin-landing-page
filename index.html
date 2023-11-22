@@ -3,66 +3,108 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="/dist/style.css" />
         <title>Landing Page | The Odin Project</title>
+        <link rel="stylesheet" href="/dist/style.css" />
     </head>
-    <body class="flex-container">
-        <section class="blue">
-            <header class="header width">
+    <body>
+        <header class="dark-section">
+            <nav class="header">
                 <h1 class="header__logo">Header Logo</h1>
-                <nav class="header__nav">
-                    <ul>
-                        <li><a href="#">header link one</a></li>
-                        <li><a href="#">header link two</a></li>
-                        <li><a href="#">header link three</a></li>
-                    </ul>
-                </nav>
-            </header>
-            <main class="hero width">
-                <div class="hero__text">
-                    <h1 class="hero__text__heading">This website is awesome</h1>
-                    <p class="hero__text__paragraph">
-                        This website has some subtext that goes here under the
-                        main title. It's a smaller font and the color is lower
-                        contrast
-                    </p>
+                <div class="header__links">
+                    <a href="#" target="_blank" rel="noopener noreferrer"
+                        >header link one</a
+                    >
+                    <a href="#" target="_blank" rel="noopener noreferrer"
+                        >header link two</a
+                    >
+                    <a href="#" target="_blank" rel="noopener noreferrer"
+                        >header link three</a
+                    >
+                </div>
+            </nav>
+        </header>
+        <main>
+            <section class="dark-section">
+                <div class="hero">
+                    <div>
+                        <h1 class="hero__heading">This website is awesome</h1>
+                        <p class="hero__subheading">
+                            This website has some subtext that goes here under
+                            the main title. It's a smaller font and the color is
+                            lower contrast
+                        </p>
+                        <button class="hero__button">Sign up</button>
+                    </div>
+                    <div>
+                        <p class="hero__image">
+                            this is a placeholder for an image
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section class="light-section">
+                <div class="info">
+                    <h1 class="info__heading">Some random information.</h1>
+                    <div class="info__cards">
+                        <div>
+                            <div class="info__cards__image"></div>
+                            <p class="info__cards__subtext">
+                                this is some subtext under an illustration or
+                                image
+                            </p>
+                        </div>
+                        <div>
+                            <div class="info__cards__image"></div>
+                            <p class="info__cards__subtext">
+                                this is some subtext under an illustration or
+                                image
+                            </p>
+                        </div>
+                        <div>
+                            <div class="info__cards__image"></div>
+                            <p class="info__cards__subtext">
+                                this is some subtext under an illustration or
+                                image
+                            </p>
+                        </div>
+                        <div>
+                            <div class="info__cards__image"></div>
+                            <p class="info__cards__subtext">
+                                this is some subtext under an illustration or
+                                image
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="gray-section">
+                <div class="quote">
+                    <blockquote>
+                        This is an inspiring quote, or a testimonial from a
+                        customer. Maybe it's just a filling up space, or maybe
+                        people will actually read it. Who knows? All I know is
+                        that it looks nice.
+                    </blockquote>
+                    <p>&mdash; Thor, God of Thunder</p>
+                </div>
+            </section>
+            <section class="light-section">
+                <div class="call-to-action">
+                    <div class="call-to-action__text">
+                        <h1>Call to action! It's time!</h1>
+                        <p>
+                            Sign up for our product by clicking that button
+                            right over there!
+                        </p>
+                    </div>
                     <button>Sign up</button>
                 </div>
-                <div class="hero__image">
-                    this is a placeholder for an image
-                </div>
-            </main>
-        </section>
-        <section class="white">
-            <div class="info width">
-                <h1 class="info__header">Some random information.</h1>
-                <div class="info__cards">
-                    <div>
-                        <img src="#" />
-                        <p>
-                            this is some subtext under an illustration or image
-                        </p>
-                    </div>
-                    <div>
-                        <img src="#" />
-                        <p>
-                            this is some subtext under an illustration or image
-                        </p>
-                    </div>
-                    <div>
-                        <img src="#" />
-                        <p>
-                            this is some subtext under an illustration or image
-                        </p>
-                    </div>
-                    <div>
-                        <img src="#" />
-                        <p>
-                            this is some subtext under an illustration or image
-                        </p>
-                    </div>
-                </div>
+            </section>
+        </main>
+        <footer class="dark-section">
+            <div class="footer">
+                Copyright &copy; The Odin Project 2021 | Replicated by Miguel
             </div>
-        </section>
+        </footer>
     </body>
 </html>
