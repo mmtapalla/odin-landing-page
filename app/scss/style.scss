@@ -177,6 +177,7 @@ html {
 
 .call-to-action {
     @extend .width, .flex-row;
+
     justify-content: space-between;
     margin-block: rem(100);
     padding: rem(50) rem(120);
